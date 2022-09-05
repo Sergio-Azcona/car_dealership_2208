@@ -31,12 +31,21 @@ class Dealership
   # stock_worth
   end
 
+  #******     at the 2 Hour mark - unable to finish*****
   def details
      ({"total_value" => total_value, "address" => @address})
     # Hash.new(|hash, v|
     # require 'pry';binding.pry
     
     # "address" => @address }
-    #******     at the 2 Hour mark - unable to finish*****
   end
+
+  def average_price_of_car
+     total_value.div(inventory_count).to_s.reverse.scan(/.{1,3}/).join(",").reverse
+    #  require 'pry';binding.pry
+     
+    #  .to_s.reverse.scan(/{-1, 3}/).join(",")
+    # ave.to_s.reverse.scan(/{-1, 3}/).join(",")
+  end
+  #****  49 mins of OVERTIME: had to find ways to add the comma  ***
 end

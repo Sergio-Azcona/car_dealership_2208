@@ -60,4 +60,14 @@ RSpec.describe Dealership do
     dealership.add_car(car_4)
     expect(dealership.details).to eq({"total_value" => 156000, "address" => "123 Main Street"})
   end
+
+  it 'should return the average price of cards' do
+    dealership.add_car(car_1)
+    dealership.add_car(car_2)
+    dealership.add_car(car_3)
+    dealership.add_car(car_4)
+  
+    expect(dealership.average_price_of_car).to eq('39,000')
+  end
+
 end
