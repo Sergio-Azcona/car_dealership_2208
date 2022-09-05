@@ -32,7 +32,7 @@ class Dealership
   end
 
   def details
-    
+     ({"total_value" => total_value, "address" => @address})
     # Hash.new(|hash, v|
     # require 'pry';binding.pry
     

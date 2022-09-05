@@ -52,7 +52,8 @@ RSpec.describe Dealership do
     expect(dealership.total_value).to eq 156000
   end
 
-  xit "stores the dealership details in a hash with the value and address" do
+  #******     at the 2 Hour mark - unable to finish Hash and onward within time*****
+  it "stores the dealership details in a hash with the value and address" do
     dealership.add_car(car_1)
     dealership.add_car(car_2)
     dealership.add_car(car_3)
