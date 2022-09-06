@@ -48,4 +48,10 @@ class Dealership
     # ave.to_s.reverse.scan(/{-1, 3}/).join(",")
   end
   #****  49 mins of OVERTIME: had to find ways to add the comma  ***
+
+  def cars_sorted_by_price
+    @inventory.sort_by { |car| car.total_cost } 
+    # require 'pry';binding.pry
+    
+  end
 end

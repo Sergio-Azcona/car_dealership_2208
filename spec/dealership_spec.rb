@@ -70,4 +70,13 @@ RSpec.describe Dealership do
     expect(dealership.average_price_of_car).to eq('39,000')
   end
 
+  it 'can sort inventoried cars by price' do
+    dealership.add_car(car_1)
+    dealership.add_car(car_2)
+    dealership.add_car(car_3)
+    dealership.add_car(car_4)
+    expect(dealership.cars_sorted_by_price).to eq([car_3,car_4,car_2,car_1])
+  end
+
+  
 end
