@@ -52,6 +52,18 @@ class Dealership
   def cars_sorted_by_price
     @inventory.sort_by { |car| car.total_cost } 
     # require 'pry';binding.pry
-    
+  end
+
+  def inventory_hash
+  # require 'pry';binding.pry
+  #   @inventory.to_h { |car| 
+  #   # require 'pry';bindin
+  #   car.make, v}
+    # by_make = Hash.new
+    @inventory.find_all do |make|
+      # by_make = 
+      cars_by_make(make).to_h
+    end
+    # return by_make
   end
 end
